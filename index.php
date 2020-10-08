@@ -29,6 +29,7 @@
         print "Sorry, for some reason, we got no hostname back <br />";
       } else {
         print "Server = " . $instanceId . "<br />";
+      }
    ?>
  <?php
   $webport = $_SERVER['RDS_PORT'];
