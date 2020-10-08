@@ -53,5 +53,7 @@
 
  mysql_close($dbconnection);
  ?>
+	   </div>
+	  </div>
  </body>
 </html>
