@@ -32,7 +32,6 @@
       }
    ?>
  <?php
-  $webport = $_SERVER['RDS_PORT'];
   $Database = $_SERVER['RDS_HOSTNAME'];
   $DBUser = $_SERVER['RDS_USERNAME'];
   $DBPassword = $_SERVER['RDS_PASSWORD'];
