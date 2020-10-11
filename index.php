@@ -28,7 +28,7 @@
       if (empty($instanceId)){
         print "Sorry, for some reason, we got no hostname back <br />";
       } else {
-        print "Server = " . $instanceId . "<br />";
+        print "This page is powered by " . $instanceId . "<br />";
       }
    ?>
  <?php
