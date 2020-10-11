@@ -19,7 +19,7 @@
 		   </p>
  <!--Get instance metadata-->
 <?php
-      echo "Getting the curl handle";
+
       $curl_handle=curl_init();
       curl_setopt($curl_handle,CURLOPT_CONNECTTIMEOUT,2);
       curl_setopt($curl_handle,CURLOPT_RETURNTRANSFER,1);
@@ -43,7 +43,7 @@
     } else {
       echo "Error creating table: " . mysql_error($dbconnection);
     }  
-  $dbselected = mysql_select_db("OctankDB");
+  $dbselected = mysql_select_db($DBName);
   $queryretrieve = "SELECT * FROM products";
       $result = mysql_query($queryretrieve, $dbconnection);
         echo $result;
