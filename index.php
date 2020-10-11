@@ -35,6 +35,7 @@
   $Database = $_SERVER['RDS_HOSTNAME'];
   $DBUser = $_SERVER['RDS_USERNAME'];
   $DBPassword = $_SERVER['RDS_PASSWORD'];
+  $DBName = $_SERVER['RDS_DBNAME'];
 
   $dbconnection = mysql_connect($Database, $DBUser, $DBPassword) or die("Could not connect: " . mysql_error());  
    if($dbconnection){
@@ -47,7 +48,8 @@
       $result = mysql_query($queryretrieve, $dbconnection);
         echo $result;
         while($row = mysql_fetch_array($result)){
-        echo $row['name'];
+	echo $row['productId'];
+        echo $row['productName'];
         echo $row['description'];
         }
 
