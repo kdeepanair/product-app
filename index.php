@@ -41,7 +41,7 @@
 
   $dbconnection = mysql_connect($Database, $DBUser, $DBPassword) or die("Could not connect: " . mysql_error());  
    if($dbconnection){
-      print "Connected to aurora successfully";
+      print "This page connects to AWS Aurora DB";
     } else {
       echo "Error creating table: " . mysql_error($dbconnection);
     }  
@@ -53,22 +53,28 @@
         <table class="table table-hover table-dark">
 	<thead>
     <tr>
-      <th scope="col">#</th>
       <th scope="col">productId</th>
       <th scope="col">productName</th>
       <th scope="col">description</th>
     </tr>
   </thead>
-		</table>
+	 <tbody>
+    <tr>
+     
+		
 		    <?php
         while($row = mysql_fetch_array($result)){
-	echo $row['productId'];
-        echo $row['productName'];
-        echo $row['description'];
+		   ?><td><?php echo $row['productId']; ?></td>
+		   <td><?php echo $row['productName']; ?></td>
+		   <td><?php echo $row['description']; ?></td> </tr>
+<?php
         }
-
+		  
  mysql_close($dbconnection);
+		
  ?>
+	   </tbody>
+		</table>
  </div>
 	  </div>	  
  </body>
