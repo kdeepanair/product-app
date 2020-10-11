@@ -4,7 +4,7 @@
    <title>Octank Product Corporation</title>
    <link rel="stylesheet" type="text/css" href="css/style.css">
    <link href="css/bootstrap.min.css" rel="stylesheet">
-   <style>body {margin-top: 40px; background-color: #533;}</style>
+   <style>body {margin-top: 40px; background-color: #433;}</style>
  </head>
  
   <body>
@@ -46,7 +46,16 @@
   $dbselected = mysql_select_db($DBName);
   $queryretrieve = "SELECT * FROM products";
       $result = mysql_query($queryretrieve, $dbconnection);
-        echo $result;
+        <table class="table table-hover table-dark">
+	<thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">productId</th>
+      <th scope="col">productName</th>
+      <th scope="col">description</th>
+    </tr>
+  </thead>
+		</table>
         while($row = mysql_fetch_array($result)){
 	echo $row['productId'];
         echo $row['productName'];
