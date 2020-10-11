@@ -46,6 +46,7 @@
   $dbselected = mysql_select_db($DBName);
   $queryretrieve = "SELECT * FROM products";
       $result = mysql_query($queryretrieve, $dbconnection);
+		   ?>
         <table class="table table-hover table-dark">
 	<thead>
     <tr>
@@ -56,6 +57,7 @@
     </tr>
   </thead>
 		</table>
+		    <?php
         while($row = mysql_fetch_array($result)){
 	echo $row['productId'];
         echo $row['productName'];
