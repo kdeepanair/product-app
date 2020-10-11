@@ -49,8 +49,7 @@
   $queryretrieve = "SELECT * FROM products";
       $result = mysql_query($queryretrieve, $dbconnection);
 		   ?>
-		    </div>
-	  </div>
+		   
         <table class="table table-hover table-dark">
 	<thead>
     <tr>
@@ -70,6 +69,7 @@
 
  mysql_close($dbconnection);
  ?>
-	  
+ </div>
+	  </div>	  
  </body>
 </html>
