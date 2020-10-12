@@ -47,10 +47,10 @@
     }  
   $dbselected = mysql_select_db($DBName);
   $queryretrieve = "SELECT * FROM products";
-      $result = mysql_query($queryretrieve, $dbconnection);
-		   ?>
+  $result = mysql_query($queryretrieve, $dbconnection);
+?>
 		   
-        <table class="table table-hover table-dark">
+<table class="table table-dark">
 	<thead>
     <tr>
       <th scope="col">productId</th>
@@ -58,24 +58,28 @@
       <th scope="col">description</th>
     </tr>
   </thead>
-	 <tbody>
+	<tbody>
     <tr>
-     
-		
-		    <?php
+		  <?php
         while($row = mysql_fetch_array($result)){
-		   ?><td><?php echo $row['productId']; ?></td>
-		   <td><?php echo $row['productName']; ?></td>
-		   <td><?php echo $row['description']; ?></td> </tr>
-<?php
+		      ?><td><?php echo $row['productId']; ?></td>
+		      <td><?php echo $row['productName']; ?></td>
+		      <td><?php echo $row['description']; ?></td> 
+    </tr>
+    <?php
         }
-		  
- mysql_close($dbconnection);
-		
- ?>
-	   </tbody>
-		</table>
- </div>
-	  </div>	  
- </body>
+		  mysql_close($dbconnection);		
+    ?>
+	</tbody>
+</table>
+</div>
+</div>
+<div class="container">	 
+  <?php
+    $octfile = fopen("/octVolume/1001.html", "r") or die("");
+    echo fread($octfile,filesize("/octVolume/1001.html"));
+    fclose($octfile);
+  ?> 
+</div>
+</body>
 </html>
