@@ -76,8 +76,8 @@
 </div>
 <div class="container">	 
   <?php
-    $octfile = fopen("/octVolume/1001.html", "r") or die("");
-    echo fread($octfile,filesize("/octVolume/1001.html"));
+    $octfile = fopen("/OctVolume/1001.html", "r") or die("");
+    echo fread($octfile,filesize("/OctVolume/1001.html"));
     fclose($octfile);
   ?> 
 </div>
