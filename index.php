@@ -6,7 +6,7 @@
    <link href="css/bootstrap.min.css" rel="stylesheet">
    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-   <style>body {margin-top: 40px; background-color: #433;}</style>
+   <style>body {margin-top: 40px; background-color: LightSkyBlue}</style>
  </head>
  
   <body>
