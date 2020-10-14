@@ -15,6 +15,7 @@
 		   <h1>Octank Product Catalog</h1>
 		   <p>
 		      <?php
+			date_default_timezone_set('US/Eastern');
 			print "The Current Date and Time is: <br/>";
 			print date("g:i A l, F j Y.");
 		      ?>
